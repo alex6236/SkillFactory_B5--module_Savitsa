@@ -15,7 +15,7 @@ def new_game(battl_field):
         print('—' * 15)
 
 
-def validation(next_step):
+def valid_xo(next_step):
     valid = False
     for row, x in enumerate(battl_field):
         for col, y in enumerate(x):
@@ -43,7 +43,7 @@ def input_num(next_step):
             print('Ошибка! Введите цифру от 1 до 9')
             count_iq += 1
             continue
-        if validation(next_step):
+        if valid_xo(next_step):
             flag = True
             return next_step
         else:
